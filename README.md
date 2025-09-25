@@ -15,16 +15,19 @@ This project is a simple PHP-based system that allows users to subscribe to and 
 
 ```kotlin
 github-timeline
-├── README.md
-└── src/
-    ├── `cron_errors.log`: A log file specifically for PHP errors from the `cron.php` script.
-    ├── `cron.php`: The script executed by the cron job to send updates to subscribers.
-    ├── `functions.php`: Contains all the core logic, including functions for sending emails, generating codes, registering/unsubscribing emails, and fetching/formatting GitHub data.
-    ├── `index.php`: The main user interface for new registrations.
-    ├── `registered_emails.txt`: A plain text file that stores the list of registered emails, with one email per line.
-    ├── `setup_cron.sh`: A bash script to easily set up the cron job on a Linux-based server.
-    ├── `unsubscribe.php`: The interface for users to unsubscribe from the service.
-    └── `cron.log`: A log file for the cron job's output and errors.
+├── src/
+|    ├── cron_errors.log
+|    ├── cron.php
+|    ├── functions.php
+|    ├── index.php
+|    ├── registered_emails.txt
+|    ├── setup_cron.sh
+|    ├── unsubscribe.php
+|    └── cron.log
+├── docker-cron
+├── Dockerfile
+├── msmtprc
+└── README.md
 ```
 
 ## ⚡ Setup and Installation
