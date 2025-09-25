@@ -1,0 +1,2 @@
+# Run cron.php every 5 minutes (adjust as needed)
+*/5 * * * * php /var/www/html/cron.php >> /var/www/html/cron.log 2>&1
