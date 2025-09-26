@@ -138,6 +138,9 @@ account default : mailtrap
 
 ```
 
+## 📸 Preview
+
+<img width="1920" height="1080" alt="screenshot" src="https://github.com/user-attachments/assets/54ba1c8e-99ee-4d7b-a679-1109d8088799" />
 
 ---
 
