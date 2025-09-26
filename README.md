@@ -104,6 +104,40 @@ github-timeline
 * Shell Script (cron setup)
 * Text File Storage (for simplicity)
 
+## 📧 Email Delivery (Mailtrap Sandbox)
+
+This project uses **[Mailtrap](https://mailtrap.io/)** in **sandbox mode** to send email verification codes safely during development and testing.  
+Mailtrap captures outgoing emails in a virtual inbox instead of delivering them to real users, preventing accidental spamming.  
+
+- All verification emails (registration/unsubscription codes) are routed to your Mailtrap sandbox inbox.  
+- You can preview the exact HTML email content, check headers, and verify that the mail is being generated correctly.  
+- For production, you can switch to Mailtrap’s **Email API** or another SMTP provider.  
+
+### Configuration
+The project includes an `msmtprc` file for SMTP configuration.  
+Update it with your Mailtrap SMTP credentials (from your Mailtrap dashboard):
+
+```bash
+# Set default values for all accounts
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        /var/log/msmtp.log
+
+# Mailtrap SMTP account
+account        mailtrap
+host           sandbox.smtp.mailtrap.io
+port           587
+from           <YOUR_REGISTERED_MAILID>
+user           <MAILTRAP_USERNAME>
+password       <MAILTRAP_PASSWORD>
+
+# Set default account to use
+account default : mailtrap
+
+```
+
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss your ideas.
