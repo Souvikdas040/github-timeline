@@ -138,6 +138,21 @@ account default : mailtrap
 
 ```
 
+
+---
+
+## 🌍 Deployment on Render with Docker
+
+This project is containerized using **Docker** and deployed on **[Render](https://render.com/)** for live hosting.
+
+### Steps to Deploy on Render
+
+1. **Build the Docker Image Locally (Optional):**
+   ```bash
+   docker build -t github-timeline-app .
+   docker run -p 8080:80 github-timeline-app
+   ```
+
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss your ideas.
