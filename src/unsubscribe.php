@@ -206,6 +206,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-bottom: 20px;
             text-align: center;
         }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 15px 20px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive layout */
+        @media (min-width: 600px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 
@@ -231,6 +278,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <p><a href="index.php">Back to registration</a></p>
+
+    <!-- Responsive Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; <?php echo date("Y"); ?> GitHub Timeline App. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="index.php">Home</a>
+                <a href="privacy.php">Privacy Policy</a>
+                <a href="contact.php">Contact</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>
